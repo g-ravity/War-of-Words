@@ -1,7 +1,7 @@
 const gameController = (()=>{
     let selfTotal = 0;
     let opponentTotal = 0;
-    const winningTotal = 20;
+    const winningTotal = 50;
     const wordList = [];
 
     return{
@@ -165,9 +165,10 @@ const UIController = (()=>{
             filter.style.display='block';
             opponentPlayer.style.opacity='1';
         },
-        resetGameDisplay: ()=>{
+        resetGameDisplay: function(){
             filter.style.display='block';
             opponentPlayer.style.opacity='0.4';
+            this.clearInput();
             setTimeout(()=>{
                 selfTotal.children[0].innerText = `TOTAL : 0`;
                 opponentTotal.children[0].innerText = `TOTAL : 0`;
@@ -233,13 +234,10 @@ const appController = ((gameCtrl, UICtrl)=>{
                             setTimeout(()=>{
                                 // Check if the game is over or not
                                 if(gameCtrl.checkGameResult().gameOver){
-                                    if(gameCtrl.checkGameResult().winner==='self')
-                                        UICtrl.showSuccessMessage('YOU WON');
-                                    else
-                                        UICtrl.showErrorMessage('OPPONENT WON');
+                                    UICtrl.showSuccessMessage('YOU WON');
                                     // Resetting everything
                                     resetGame();
-                                    setTimeout(()=>{ window.location.href='/'; }, 3200);
+                                    setTimeout(()=>{ UICtrl.opponentTurn() }, 3200);
                                 }
                                 else
                                     socket.emit('activeTurn', socket.id);
@@ -280,13 +278,10 @@ const appController = ((gameCtrl, UICtrl)=>{
             setTimeout(()=>{
                 // Check if game is over or not
                 if(gameCtrl.checkGameResult().gameOver){
-                    if(gameCtrl.checkGameResult().winner==='self')
-                        UICtrl.showSuccessMessage('YOU WON');
-                    else
-                        UICtrl.showErrorMessage('OPPONENT WON');
+                    UICtrl.showErrorMessage('OPPONENT WON');
                     // Resetting everything
                     resetGame();
-                    setTimeout(()=>{ window.location.href='/'; }, 3200);
+                    setTimeout(()=>{ UICtrl.selfTurn() }, 3200);
                 }
             }, 800);
         });
@@ -326,7 +321,10 @@ const appController = ((gameCtrl, UICtrl)=>{
     return {
         init: ()=>{
             console.log('Application has started!');
+            // PRODUCTION
             socket = io.connect('https://war-of-words.herokuapp.com/');
+            // DEVELOPMENT
+            // socket = io.connect('http://localhost:3000');
             socket.emit('newGameTurn');
             setUpEventListeners();
             // Show the initial scores

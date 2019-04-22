@@ -77,13 +77,13 @@ app.post('/verify', async (req,res)=>{
             const wordInfo = JSON.parse(body);
             const verifiedWord = (wordInfo.def.length>0);
             if(verifiedWord)
-                res.status(200).send('Verified Word');
+                res.status(200).send('VERIFIED WORD');
             else
-                res.status(400).send('Invalid Word');
+                res.status(400).send('INVALID WORD');
         }
         else{
             console.log(error);
-            res.status(400).send('Something went wrong!');
+            res.status(400).send('SOMETHING WENT WRONG');
         }
     });
 });
