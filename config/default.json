@@ -1,0 +1,4 @@
+{
+    "baseURL": "https://dictionary.yandex.net/api/v1/dicservice.json/lookup?lang=en-en&key=",
+    "apiKey": ""
+}

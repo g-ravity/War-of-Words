@@ -1,0 +1,36 @@
+{
+  "name": "war-of-words",
+  "version": "1.0.0",
+  "description": "A simple 2 player text battle web game",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g-ravity/War-of-Words.git"
+  },
+  "keywords": [
+    "text",
+    "battle",
+    "game",
+    "web",
+    "vocabulary",
+    "war",
+    "words"
+  ],
+  "author": "Ravik Ganguly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g-ravity/War-of-Words/issues"
+  },
+  "homepage": "https://github.com/g-ravity/War-of-Words#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "config": "^3.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0",
+    "socket.io": "^2.2.0"
+  }
+}
