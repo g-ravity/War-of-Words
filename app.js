@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const PORT = 3000;
+const port = process.env.PORT || 3000;
 const socketList=[];
 let turn;
 
@@ -22,8 +22,8 @@ if(!config.get('apiKey')){
     process.exit(1);
 }
 
-const server = app.listen(PORT, ()=>{
-    console.log(`Server started at PORT ${PORT}`);
+const server = app.listen(port, ()=>{
+    console.log(`Server started at PORT ${port}`);
 });
 
 const io = socket(server);
