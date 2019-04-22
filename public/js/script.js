@@ -326,7 +326,7 @@ const appController = ((gameCtrl, UICtrl)=>{
     return {
         init: ()=>{
             console.log('Application has started!');
-            socket = io.connect('http://localhost:3000');
+            socket = io.connect('https://war-of-words.herokuapp.com/');
             socket.emit('newGameTurn');
             setUpEventListeners();
             // Show the initial scores
