@@ -13,7 +13,7 @@ body{
 }
 
 #board .players{
-    width: 100%;
+    width: 50vw;
     min-height: 100vh;
     text-align: center;
 }
@@ -145,7 +145,7 @@ body{
 
 #filter{
     width: 50vw;
-    height: 100vh;
+    min-height: 100vh;
     background: #38c4ff;
     opacity: 0.4;
     position: absolute;
