@@ -73,7 +73,8 @@ const UIController = (()=>{
         flashHeader: '#flash_message #flash_header',
         flashContent: '#flash_message #flash_content',
         filter: '#filter',
-        opponentPlayer: '#player_opponent'
+        opponentPlayer: '#player_opponent',
+        selfPlayer: '#player_self'
     }
 
     const loader = document.querySelector(DOMStrings.loader);
@@ -90,6 +91,7 @@ const UIController = (()=>{
     const flashContent = document.querySelector(DOMStrings.flashContent);
     const filter = document.querySelector(DOMStrings.filter);
     const opponentPlayer = document.querySelector(DOMStrings.opponentPlayer);
+    const selfPlayer = document.querySelector(DOMStrings.selfPlayer);
 
     return {
         DOMStrings: DOMStrings,
@@ -157,16 +159,16 @@ const UIController = (()=>{
             wordInput.readOnly = false;
         },
         selfTurn: function(){
-            filter.style.display='none';
+            selfPlayer.style.opacity='1';
             opponentPlayer.style.opacity='0.4';
             this.enableWordInput();
         },
         opponentTurn: ()=>{
-            filter.style.display='block';
+            selfPlayer.style.opacity = '0.6';
             opponentPlayer.style.opacity='1';
         },
         resetGameDisplay: function(){
-            filter.style.display='block';
+            selfPlayer.style.opacity = '0.6';
             opponentPlayer.style.opacity='0.4';
             this.clearInput();
             setTimeout(()=>{
@@ -329,6 +331,7 @@ const appController = ((gameCtrl, UICtrl)=>{
             setUpEventListeners();
             // Show the initial scores
             showTotalScores();
+            UICtrl.disableWordInput();
         }
     }
 })(gameController, UIController);

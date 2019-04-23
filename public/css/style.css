@@ -143,14 +143,8 @@ body{
     margin-bottom: 10px;
 }
 
-#filter{
-    width: 50vw;
-    min-height: 100vh;
-    background: #38c4ff;
-    opacity: 0.4;
-    position: absolute;
-    top: 0;
-    left: 0;
+#player_self{
+    opacity: 0.6;
 }
 
 #player_opponent{
