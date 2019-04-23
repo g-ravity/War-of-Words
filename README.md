@@ -15,4 +15,4 @@ To start the application in your local machine:
 
 * Go to public/js/script.js
 * Change the io.connect URL to "http://localhost:3000"
-* Start the nop application using nodemon / node app.js
+* Start the node application using nodemon / node app.js
