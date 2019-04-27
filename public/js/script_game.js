@@ -322,9 +322,9 @@ const appController = ((gameCtrl, UICtrl)=>{
         init: ()=>{
             console.log('Application has started!');
             // PRODUCTION
-            // socket = io.connect('https://war-of-words.herokuapp.com/');
+            socket = io.connect('https://war-of-words.herokuapp.com/', {query: `roomID= ${window.location.href.substr(-6)}`});
             // DEVELOPMENT
-            socket = io.connect('http://localhost:3000', {query: `roomID= ${window.location.href.substr(-6)}`});
+            // socket = io.connect('http://localhost:3000', {query: `roomID= ${window.location.href.substr(-6)}`});
             socket.emit('newGameTurn');
             setUpEventListeners();
             // Show the initial scores
