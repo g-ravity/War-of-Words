@@ -13,6 +13,6 @@ To get your API Key, go to [Tech Yandex Dictionary API], signup and get your API
 
 To start the application in your local machine:
 
-* Go to public/js/script.js
+* Go to public/js/script_game.js
 * Change the io.connect URL to "http://localhost:3000"
 * Start the node application using nodemon / node app.js
