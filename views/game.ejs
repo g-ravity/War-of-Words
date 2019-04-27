@@ -1,0 +1,47 @@
+<% include partials/header %>
+
+<link rel="stylesheet" href="../css/style_game.css">
+<div id="board">
+    <div id="player_self" class="players">
+        <h1 class="header">YOU</h1>
+        <input type="text" id="word_input" placeholder="Type Here">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        <div class="total_score">
+            <h3></h3>
+        </div>
+        <div class="word_history">
+            <div class="words">
+                <h2>WORDS</h2>
+            </div>
+            <div class="points">
+                <h2>POINTS</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div id="filter"></div><div id="player_opponent" class="players">
+        <h1 class="header">OPPONENT</h1>
+        <p id="typing">Opponent is typing...</p>
+        <div class="total_score">
+            <h3></h3>
+        </div>
+        <div class="word_history">
+            <div class="words">
+                <h2>WORDS</h2>
+            </div>
+            <div class="points">
+                <h2>POINTS</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="winning_score">
+    <p>TO WIN</p>
+    <input type="number" value="50" id="winning_score_input" readonly>
+</div>
+
+<% include partials/flashMessage %>
+
+<script src="/js/script_game.js"></script>
+<% include partials/footer %>
