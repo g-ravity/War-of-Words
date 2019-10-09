@@ -1,7 +1,12 @@
 body {
+  text-align: center;
+}
+
+#home_page {
+  height: 100vh;
+  width: 100vw;
   background: #38c4ff;
   color: white;
-  text-align: center;
 }
 
 #showcase {
