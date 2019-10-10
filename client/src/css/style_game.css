@@ -1,0 +1,189 @@
+#board {
+  display: flex;
+}
+
+#board .players {
+  width: 50vw;
+  min-height: 100vh;
+  text-align: center;
+}
+
+#board #player_self {
+  color: white;
+  background: #38c4ff;
+}
+
+#board .header {
+  margin: 30px 0px;
+  font-size: 2rem;
+}
+
+#board input#word_input {
+  padding: 10px;
+  font-size: 1.2rem;
+  background: none;
+  border: 2px solid white;
+  color: white;
+}
+
+#board input#word_input::placeholder {
+  color: white;
+}
+
+#board input#word_input:focus {
+  outline: 0;
+}
+
+#board .total_score {
+  margin-top: 30px;
+}
+
+#board .word_history {
+  border: 2px solid black;
+  min-height: 600px;
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+#board #player_self .word_history {
+  border: 2px solid white;
+}
+
+#player_opponent p#typing {
+  font-size: 1.2rem;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.4);
+  font-style: italic;
+  opacity: 0;
+}
+
+#board .word_history .words,
+#board .word_history .points {
+  margin-top: 20px;
+}
+
+#board .word_history h2 {
+  text-decoration: underline;
+}
+
+#board .word_history p {
+  padding: 10px;
+  font-size: 1.4rem;
+}
+
+#winning_score {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 100px;
+  margin-left: -50px;
+  height: 100px;
+  text-align: center;
+}
+
+#winning_score p {
+  background: black;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+#winning_score input#winning_score_input {
+  font-size: 2.5rem;
+  padding: 10px;
+  background: black;
+  border: none;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+}
+
+#winning_score input:focus {
+  outline: 0;
+}
+
+#winning_score input[type="number"]::-webkit-inner-spin-button,
+#winning_score input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#flash_message {
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -150px;
+  opacity: 0;
+  width: 300px;
+  height: 100px;
+}
+
+#player_self {
+  opacity: 0.6;
+}
+
+#player_opponent {
+  opacity: 0.4;
+}
+
+/* Loader style & animation */
+.lds-ellipsis {
+  display: none;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin-top: -10px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 27px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 6px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 6px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 26px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 45px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
+  }
+}
