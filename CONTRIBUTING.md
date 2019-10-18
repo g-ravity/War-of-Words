@@ -61,7 +61,7 @@ As a basic rule, before filing issues, feature requests or anything else. Take a
 3. Increase the version numbers in any examples files, README.md, and the CHANGELOG.md to the new version that this
    Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
 4. Your Pull Request would be merged once we have reviewed your code contribution
-5. Please follow the specified [Pull Request](.github/PULL_REQUEST_TEMPLATE.md) format, while sending in your PR
+5. Please follow the specified [Pull Request](.github/pull_request_template.md) format, while sending in your PR
 6. Mention the issue ID that your PR fixes, so that once your PR is merged, the issue gets closed automatically
 
 ## Styleguide
