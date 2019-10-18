@@ -1,38 +1,42 @@
 {
-  "name": "war-of-words",
-  "version": "1.0.0",
-  "description": "A simple 2 player text battle web game",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/g-ravity/War-of-Words.git"
-  },
-  "keywords": [
-    "text",
-    "battle",
-    "game",
-    "web",
-    "vocabulary",
-    "war",
-    "words"
-  ],
-  "author": "Ravik Ganguly",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/g-ravity/War-of-Words/issues"
-  },
-  "homepage": "https://github.com/g-ravity/War-of-Words#readme",
-  "dependencies": {
-    "axios": "^0.19.0",
-    "body-parser": "^1.19.0",
-    "config": "^3.2.3",
-    "cookie-parser": "^1.4.4",
-    "express": "^4.17.1",
-    "express-session": "^1.16.2",
-    "socket.io": "^2.3.0"
-  }
+	"name": "war-of-words",
+	"version": "1.0.0",
+	"description": "War of Words project repository",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/g-ravity/War-of-Words.git"
+	},
+	"keywords": [
+		"text",
+		"battle",
+		"web",
+		"game",
+		"react",
+		"node",
+		"sockets"
+	],
+	"author": "Ravik Ganguly",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/g-ravity/War-of-Words/issues"
+	},
+	"homepage": "https://github.com/g-ravity/War-of-Words#readme",
+	"dependencies": {},
+	"devDependencies": {
+		"eslint": "^6.1.0",
+		"eslint-config-airbnb": "^18.0.1",
+		"eslint-config-node": "^4.0.0",
+		"eslint-config-prettier": "^6.4.0",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-node": "^10.0.0",
+		"eslint-plugin-prettier": "^3.1.1",
+		"eslint-plugin-react": "^7.14.3",
+		"eslint-plugin-react-hooks": "^1.7.0",
+		"prettier": "^1.18.2"
+	}
 }
