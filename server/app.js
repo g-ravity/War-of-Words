@@ -13,21 +13,19 @@ app.use(bodyParser.json());
 // COOKIE MIDDLEWARE
 app.use(cookieParser());
 app.use(
-  session({
-    secret: "mySecretKey",
-    resave: false,
-    saveUninitialized: true
-  })
+	session({
+		secret: "mySecretKey",
+		resave: false,
+		saveUninitialized: true
+	})
 );
 
 if (!config.get("apiKey")) {
-  console.error("FATAL ERROR! API key not provided");
-  process.exit(1);
+	console.error("FATAL ERROR! API key not provided");
+	process.exit(1);
 }
 
 const port = process.env.PORT || 3000;
 
-const server = app.listen(port, () =>
-  console.log(`Server started at PORT ${port}`)
-);
+const server = app.listen(port, () => console.log(`Server started at PORT ${port}`));
 require("./services/socket")(socket(server));
